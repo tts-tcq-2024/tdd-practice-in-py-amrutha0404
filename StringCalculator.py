@@ -3,4 +3,4 @@ def add(input):
     return 0
 
 def isEmptString(input):
-  return s == ""
+  return input == ""
