@@ -1,2 +1,6 @@
 def add(input):
-  return -1
+  if isEmptString(input):
+    return 0
+
+def isEmptString(input):
+  return s == ""
