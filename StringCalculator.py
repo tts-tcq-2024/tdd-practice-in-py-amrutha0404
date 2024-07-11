@@ -4,6 +4,7 @@ def add(input):
     if is_empty_string(input):
         return 0
     numbers = filter_numbers(input)
+    check_negatives(numbers)
     return sum_numbers(numbers)
 
 def filter_numbers(input):
@@ -19,3 +20,8 @@ def sum_numbers(numbers):
         if int(number) < 1000:
             number_list.append(int(number))
     return sum(number_list)
+    
+def check_negatives(numbers):
+    negative_numbers = [num for num in numbers if int(num) < 0]
+    if negative_numbers:
+        raise ValueError(f"negatives not allowed: {', '.join(negative_numbers)}")
